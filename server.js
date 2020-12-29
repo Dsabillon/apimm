@@ -6,6 +6,9 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
 
+var cors = require('cors');
+app.use(cors({optionsSuccessStatus: 200}));  // some legacy browsers choke on 204
+
 app.use(bodyParser.json())
 
 // http://expressjs.com/en/starter/static-files.html
